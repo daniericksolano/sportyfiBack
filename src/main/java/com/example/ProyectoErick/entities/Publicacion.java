@@ -1,9 +1,6 @@
 package com.example.ProyectoErick.entities;
 
 import jakarta.persistence.*;
-import lombok.Data;
-
-@Data
 @Entity
 public class Publicacion {
     @Id
@@ -23,4 +20,68 @@ public class Publicacion {
     @Lob
     @Basic(fetch = FetchType.LAZY)
     private byte[] imagen;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getDeporte() {
+        return deporte;
+    }
+
+    public void setDeporte(String deporte) {
+        this.deporte = deporte;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getPosicionDeporte() {
+        return posicionDeporte;
+    }
+
+    public void setPosicionDeporte(String posicionDeporte) {
+        this.posicionDeporte = posicionDeporte;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public Deportista getDeportista() {
+        return deportista;
+    }
+
+    public void setDeportista(Deportista deportista) {
+        this.deportista = deportista;
+    }
+
+    public String getVideo() {
+        return video;
+    }
+
+    public void setVideo(String video) {
+        this.video = video;
+    }
+
+    public byte[] getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(byte[] imagen) {
+        this.imagen = imagen;
+    }
 }

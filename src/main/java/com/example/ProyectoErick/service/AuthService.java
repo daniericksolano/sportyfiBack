@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 public class AuthService {
     @Autowired
     private DeportistaDao deportistaDao;
-
     public Perfil validarDeportista(Login login) {
         Deportista deportista = deportistaDao.findByCorreoAndPassword(login.getCorreo(), login.getPassword());
         Perfil perfil = new Perfil();

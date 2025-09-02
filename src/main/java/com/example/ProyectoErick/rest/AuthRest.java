@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.*;
 public class AuthRest {
     @Autowired
     private AuthService authService;
-
     @PostMapping("/deportista")
     @ResponseStatus(HttpStatus.CREATED)
     public Perfil validarDeportista(@RequestBody Login login) {
